@@ -29,9 +29,8 @@ def play_again():
         print("That is not one of the options. Try y or n.")
 #play agin function is defined in order to give the user an ability to replay the programme after finishing
 
-
 while True:
-  instructions = str(input("Do you need instructions to play, y/n? "))
+  instructions = str(input("Hello and welcome to this Multi CHoice QUiz! \n\nDo you need instructions to play, y/n? "))
   if instructions in yes:
     print("\nWelcome to this MultiChoice quiz, before the quiz begins you will be asked which theme you want to play, either type which theme or enter a number between 1 and 3. \n\nOnce you have chosen a theme questions will be asked, then you will have 4 options to choose from, type a, b, c or d to answer. \n\nHave fun!")
     break
@@ -39,8 +38,9 @@ while True:
     break
   else:
     print("That's not one of the options. Try y or n.")
-
+#This section asks the user if they want instructions
 while play in yes:
+#Entire question section is looped n order for the play again function to work
   while True:
    print(border)
    theme = str(input("Welcome to this Multi Choice quiz, we have 3 themes available, \n\t1. Countries \n\t2. Sports \n\t3. Physics \nWhich Theme would you like to play? \nAnswer: "))
@@ -62,6 +62,7 @@ while play in yes:
       else:
         print("That is not one of the options. Try a,b,c or d.")
         print(border)
+#All questions follow the same format, as this way we can retry as many times until the user gives a valid input, and it look clean and clear on the terminal
      while True:
       c2 = str(input("Which country has the largest population? \n\ta) Brazil \n\tb) India \n\tc) China  \n\td) Nigeria  \nAnswer: "))
       print(border)
